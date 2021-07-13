@@ -1,0 +1,11 @@
+<ng-container *ngIf="todos$ | async as todos; else showLoading">
+  <ng-container *ngIf="todos.length > 0; else showNoTodosMessage">
+    <div *ngFor="let todo of todos$ | async">
+      {{ todo?.title }}
+    </div>
+  </ng-container>
+  <ng-template #showNoTodosMessage> No Todos added yet! </ng-template>
+</ng-container>
+<ng-template #showLoading><div>Loading...</div> </ng-template>
+
+<button id="clear-todos-button" (click)="clearTodos()">Clear Todos</button>

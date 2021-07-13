@@ -1,0 +1,17 @@
+:host {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#add-todo-button {
+  width: 100px;
+  height: 52px;
+  font-weight: bold;
+  background-color: indianred;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
